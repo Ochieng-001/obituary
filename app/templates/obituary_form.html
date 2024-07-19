@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Obituary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Submit Obituary</h1>
+        <form method="post" action="{{ url_for('submit_obituary') }}">
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.name.label }}<br>
+                {{ form.name() }}<br>
+                {% for error in form.name.errors %}
+                    <div class="error">{{ error }}</div>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.date_of_birth.label }}<br>
+                {{ form.date_of_birth() }}<br>
+                {% for error in form.date_of_birth.errors %}
+                    <div class="error">{{ error }}</div>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.date_of_death.label }}<br>
+                {{ form.date_of_death() }}<br>
+                {% for error in form.date_of_death.errors %}
+                    <div class="error">{{ error }}</div>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.content.label }}<br>
+                {{ form.content() }}<br>
+                {% for error in form.content.errors %}
+                    <div class="error">{{ error }}</div>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.author.label }}<br>
+                {{ form.author() }}<br>
+                {% for error in form.author.errors %}
+                    <div class="error">{{ error }}</div>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.slug.label }}<br>
+                {{ form.slug() }}<br>
+                {% for error in form.slug.errors %}
+                    <div class="error">{{ error }}</div>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.submit() }}
+            </div>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
