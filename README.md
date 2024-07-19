@@ -2,13 +2,13 @@
 
 ## Overview
 
-This is a Flask-based web application for submitting, managing, and displaying obituaries. It includes features for SEO and social media optimization to enhance visibility and engagement.
+This is a Flask-based web application for submitting, managing, and displaying obituaries.
 
 ## Setup
 
 1. Clone the repository:
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/Ochieng-001/obituary.git
     cd obituary_platform
     ```
 
